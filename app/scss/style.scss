@@ -1,7 +1,69 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
 
-@import 'media';
+.header {
+  padding: 40px 0;
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item + .menu__list-item {
+    margin-left: 35px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $title;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $accent;
+      border-bottom: 1px solid $accent;
+    }
+  }
+
+  &__link--active {
+    color: $accent;
+    border-bottom: 1px solid $accent;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__link--user::before {
+    background-image: url("../images/icons/user.svg");
+  }
+  &__link--search::before {
+    background-image: url("../images/icons/search.svg");
+  }
+  &__link--like::before {
+    background-image: url("../images/icons/heart.svg");
+  }
+  &__link--cart::before {
+    background-image: url("../images/icons/cart.svg");
+  }
+
+  &__link + .user-nav__link {
+    margin-left: 25px;
+  }
+}
+
+@import "media";
