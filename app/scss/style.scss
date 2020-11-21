@@ -209,6 +209,7 @@
   display: flex;
   justify-content: space-between;
   padding: 27px 0;
+  font-size: 12px;
 
   &__payment {
     display: flex;
@@ -222,7 +223,7 @@
   &__option::after {
     content: "";
     display: block;
-    margin-left: 20px;
+    margin-left: 25px;
     height: 20px;
     background-repeat: no-repeat;
     background-size: contain;
