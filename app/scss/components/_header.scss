@@ -1,0 +1,92 @@
+.header {
+  padding: 40px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item + .menu__list-item {
+    padding-left: 35px;
+  }
+
+  &__link {
+    @extend %roboto-400;
+    text-transform: uppercase;
+    color: $title;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $accent;
+      text-shadow: 0 -0.1px $accent;
+      border-bottom: 1px solid $accent;
+    }
+  }
+
+  &__link--active {
+    @extend %roboto-700;
+    color: $accent;
+    border-bottom: 1px solid $accent;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    outline: transparent;
+    cursor: pointer;
+
+
+    &::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+
+    &--user::before {
+      background-image: url("../images/icons/sprite.svg#user");
+    }
+    &--search::before {
+      background-image: url("../images/icons/sprite.svg#search");
+    }
+    &--like::before {
+      background-image: url("../images/icons/sprite.svg#heart");
+    }
+    &--cart::before {
+      background-image: url("../images/icons/sprite.svg#cart");
+    }
+  }
+
+
+  &__link + &__link {
+    margin-left: 25px;
+  }
+
+  &__num {
+    position: absolute;
+    top: -9px;
+    right: -13px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: $accent;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+  }
+}
