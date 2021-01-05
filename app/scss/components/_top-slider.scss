@@ -1,9 +1,10 @@
 .top-slider {
   background-color: $bg;
-  padding: 65px 0 45px;
+  padding-top: 65px;
   background-image: url('../../images/slider/slider_bg.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
 
   &__container {
     max-width: 1560px;
