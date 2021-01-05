@@ -40,29 +40,30 @@
   &__social-item + &__social-item {
     padding-left: 18px;
   }
-  
+
   &__social-link {
     transition: all 0.3s;
     display: block;
     width: 20px;
     height: 20px;
     background-size: contain;
+    background-repeat: no-repeat;
     filter: invert(67%) sepia(0%) saturate(0%) hue-rotate(160deg) brightness(84%) contrast(82%);
 
     &--facebook {
-      background-image: url('../../images/icons/sprite.svg#facebook');      
+      background-image: url("../../images/icons/sprite.svg#facebook");
     }
     &--twitter {
-          background-image: url('../../images/icons/sprite.svg#twitter');
+      background-image: url("../../images/icons/sprite.svg#twitter");
     }
     &--linkedin {
-          background-image: url('../../images/icons/sprite.svg#linkedin');
+      background-image: url("../../images/icons/sprite.svg#linkedin");
     }
     &--google {
-          background-image: url('../../images/icons/sprite.svg#google+');
+      background-image: url("../../images/icons/sprite.svg#google+");
     }
     &--pinterest {
-          background-image: url('../../images/icons/sprite.svg#pinterest');
+      background-image: url("../../images/icons/sprite.svg#pinterest");
     }
 
     &:hover {
@@ -70,8 +71,8 @@
     }
   }
 
-  &__address, 
-  &__email, 
+  &__address,
+  &__email,
   &__phone {
     display: block;
     margin-bottom: 10px;
@@ -121,8 +122,7 @@
     transition: box-shadow 0.3s;
 
     &:hover {
-      box-shadow: 0px 0px 10px 2px rgba(255, 17, 48, 0.3),
-      0px 10px 10px 0px rgba(255, 17, 48, 0.3);
+      box-shadow: 0px 0px 10px 2px rgba(255, 17, 48, 0.3), 0px 10px 10px 0px rgba(255, 17, 48, 0.3);
     }
   }
 }
@@ -152,17 +152,17 @@
   }
 
   &__macard::after {
-    background-image: url('../images/footer/mastercard.png');
+    background-image: url("../images/footer/mastercard.png");
     width: 33px;
   }
 
   &__visa::after {
-    background-image: url('../images/footer/visa.png');
+    background-image: url("../images/footer/visa.png");
     width: 28px;
   }
 
   &__paypal::after {
-    background-image: url('../images/footer/paypal.png');
+    background-image: url("../images/footer/paypal.png");
     width: 77px;
   }
 }
