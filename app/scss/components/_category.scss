@@ -1,0 +1,111 @@
+.category {
+  padding: 120px 0;
+  background-image: url("../../images/decor/category-before-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+
+  &__inner {
+    background-image: url("../../images/decor/category-before-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+
+  &__info {
+    margin-top: 105px;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__subtitle {
+    @extend %text;
+  }
+
+  &__items {
+    display: grid;
+    gap: 30px;
+    min-height: 635px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+
+    &:nth-child(1) {
+      grid-row: span 2;
+
+      .category__item-subtitle {
+        color: #8a5ce7;
+      }
+
+      .category__item-link:hover {
+        color: #8a5ce7;
+        border-color: #8a5ce7;
+      }
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      grid-column: span 2;
+
+      .category__item-subtitle {
+        color: $accent;
+      }
+
+      .category__item-link:hover {
+        color: $accent;
+        border-color: $accent;
+      }
+    }
+
+    &:nth-child(3) {
+      .category__item-subtitle {
+        color: #ffb534;
+      }
+
+      .category__item-link:hover {
+        color: #ffb534;
+        border-color: #ffb534;
+      }
+    }
+
+    &:nth-child(4) {
+      .category__item-subtitle {
+        color: #90d4f8;
+      }
+
+      .category__item-link:hover {
+        color: #90d4f8;
+        border-color: #90d4f8;
+      }
+    }
+
+    &-subtitle {
+      margin-bottom: 5px;
+    }
+
+    &-title {
+      @extend %roboto-400;
+      font-weight: 500;
+      font-size: 22px;
+      color: $title;
+      margin-bottom: 5px;
+    }
+
+    &-link {
+      text-transform: uppercase;
+      color: $title;
+      @extend %roboto-400;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 5px;
+      transition: all 0.3s;
+    }
+  }
+}
